@@ -1,5 +1,7 @@
 # Minitalk
 
+![Alt text](/clientserver.png?raw=true "Correction")
+
 L'objectif de ce projet est de coder un "small data exchange program" en utilisant les **UNIX signals**. Il est nécessaire de réaliser deux exécutables : un client et un serveur. Il est nécessaire de faire un **Makefile**. Il est demandé de "handle errors sensitively". 
 
 **Un signal est un message qu'un processus va pouvoir envoyer à un autre. Un signal va notamment permettre de changer le statut d'un processus.** 
