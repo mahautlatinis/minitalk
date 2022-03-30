@@ -1,5 +1,13 @@
 # Minitalk
 
+minitalk - 2021 (Common Core)
+
+- Actual Status : finished.
+- Result        : 125% (validated 06/16/2O21)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
 ![Alt text](/clientserver.png?raw=true "Correction")
 
 L'objectif de ce projet est de coder un "small data exchange program" en utilisant les **UNIX signals**. Il est nécessaire de réaliser deux exécutables : un client et un serveur. Il est nécessaire de faire un **Makefile**. Il est demandé de "handle errors sensitively". 
