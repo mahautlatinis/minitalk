@@ -1,4 +1,4 @@
-# Minitalk
+# minitalk 📚
 
 minitalk - 2021 (Common Core)
 
