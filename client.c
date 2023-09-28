@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:53:59 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 19:54:01 by malatini         ###   ########.fr       */
+/*   Updated: 2023/09/28 19:12:42 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ void	convert_char(char c, int pid)
 	while (i >= 0)
 	{
 		if (c >> i & 1)
-			kill(pid, SIGUSR1);
-		else
 			kill(pid, SIGUSR2);
+		else
+			kill(pid, SIGUSR1);
 		usleep(100);
 		i--;
 	}

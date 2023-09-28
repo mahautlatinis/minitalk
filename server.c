@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/09/28 19:02:17 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/09/28 19:13:36 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ void	ft_putnbr(int nb)
 }
 
 /* Traduction des différents bits envoyés pour reconstruire le char */
-void	translate_message(int num)
+void	translate_message(int signalValue)
 {
 	static int	power;
 	static char	byte;
 
-	if (num == SIGUSR1)
+	if (signalValue == SIGUSR2)
 		byte += 1 << (7 - power);
 	power++;
 	if (power == 8)
