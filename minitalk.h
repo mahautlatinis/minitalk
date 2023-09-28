@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:46:39 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/16 15:46:42 by malatini         ###   ########.fr       */
+/*   Updated: 2023/09/28 19:29:56 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_putnbr(int nb);
-void	translate_message(int num);
+void	decrypt_message(int num);
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
-void	convert_char(char c, int pid);
+void	send_char_as_signals_signals(char c, int pid);
 
 #endif

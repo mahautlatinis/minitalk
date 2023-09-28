@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:53:59 by malatini          #+#    #+#             */
-/*   Updated: 2023/09/28 19:12:42 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/09/28 19:29:56 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_atoi(const char *str)
 	return ((int)result * sign);
 }
 
-void	convert_char(char c, int pid)
+void	send_char_as_signals(char c, int pid)
 {
 	int	i;
 
@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 		if (argc == 3)
 		{
 			while (argv[2][i])
-				convert_char(argv[2][i++], pid);
+				send_char_as_signals(argv[2][i++], pid);
 		}
 		else if (argc == 2)
 		{

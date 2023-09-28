@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/09/28 19:13:36 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/09/28 19:31:47 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ void	ft_putnbr(int nb)
 }
 
 /* Traduction des différents bits envoyés pour reconstruire le char */
-void	translate_message(int signalValue)
+void	decrypt_message(int signalValue)
 {
-	static int	power;
-	static char	byte;
+	static int	power = 0;
+	static char	byte = 0;
 
 	if (signalValue == SIGUSR2)
 		byte += 1 << (7 - power);
@@ -76,8 +76,8 @@ int	main(int argc, char **argv)
 		ft_putstr("My pid is: ");
 		ft_putnbr(pid);
 		ft_putchar('\n');
-		signal(SIGUSR1, translate_message);
-		signal(SIGUSR2, translate_message);
+		signal(SIGUSR1, decrypt_message);
+		signal(SIGUSR2, decrypt_message);
 		while (42)
 			pause();
 	}
