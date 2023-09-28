@@ -3,28 +3,30 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: malatini <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 19:28:43 by malatini          #+#    #+#              #
-#    Updated: 2021/06/14 19:28:44 by malatini         ###   ########.fr        #
+#    Updated: 2023/09/28 18:59:38 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CLIENT			=	client
 
-CLIENT_B		=	client_bonus
+BONUS			= 	./bonus/
+
+CLIENT_B		=	${BONUS}client_bonus
 
 SERVER			=	server
 
-SERVER_B		=	server_bonus
+SERVER_B		=	${BONUS}server_bonus
 
 SRCS_CLIENT 	= 	./client.c \
 
-SRCS_CLIENT_B	=	./client_bonus.c \
+SRCS_CLIENT_B	=	${BONUS}client_bonus.c \
 
 SRCS_SERVER 	=	./server.c \
 
-SRCS_SERVER_B 	=	./server_bonus.c \
+SRCS_SERVER_B 	=	${BONUS}server_bonus.c \
 
 OBJS_CLIENT 	=	${SRCS_CLIENT:.c=.o}
 OBJS_CLIENT_B 	=	${SRCS_CLIENT_B:.c=.o}
@@ -56,7 +58,7 @@ ${SERVER_B}:	${OBJS_SERVER_B}
 				${CC} ${CFLAGS} -o ${SERVER_B} ${OBJS_SERVER_B}
 
 clean:
-				${RM} ${OBJS_CLIENT} ${OBJS_SERVER} ${OBJS_SERVER_B} ${OBJS_CLIENT_B}
+				${RM} ${OBJS_CLIENT} ${OBJS_SERVER} ${OBJS_CLIENT_B} ${OBJS_SERVER_B}
 
 fclean:			clean
 				${RM} ${CLIENT} ${SERVER} ${CLIENT_B} ${SERVER_B}
