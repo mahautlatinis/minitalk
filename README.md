@@ -3,10 +3,7 @@
 minitalk - 2021 (Common Core)
 
 - Actual Status : finished.
-- Result        : 125% (validated 06/16/2O21)
-
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+- Result        : 125% (validated 06/16/2021)
 
 ![Alt text](/clientserver.png?raw=true "Correction")
 
@@ -70,14 +67,6 @@ Le serveur doit afficher le signal très rapidement. Une seconde pour 100 caract
 - **exit**
     - man 3 exit : termine un processus.
 
-## BONUS
-
-- Ajouter un "small acknowledgement system".
-- Supporter les Unicode characters.
-
-## Traduction d'un message binaire
-
-Pour rappel, 8 bits (1 octet) permettent de représenter un char.
 
 ## Bit shifting and bit masking
 
