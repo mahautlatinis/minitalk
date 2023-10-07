@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:07:06 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/16 16:07:09 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/07 19:24:43 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	if (argc > 1 && argc < 4)
+	if (argc > 1 && argc < 4 && __APPLE__)
 	{
 		pid = ft_atoi(argv[1]);
 		if (pid == 0)

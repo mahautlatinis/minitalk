@@ -6,13 +6,12 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/09/28 19:31:47 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:24:29 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./minitalk.h"
 
-/* On fait un ft_putnbr pour afficher le pid */
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -47,7 +46,6 @@ void	ft_putnbr(int nb)
 	ft_putchar(nb % 10 + '0');
 }
 
-/* Traduction des différents bits envoyés pour reconstruire le char */
 void	decrypt_message(int signalValue)
 {
 	static int	power = 0;
@@ -64,13 +62,12 @@ void	decrypt_message(int signalValue)
 	}
 }
 
-/* Je vais pouvoir afficher le caractère une fois les 8 bits transmis */
 int	main(int argc, char **argv)
 {
 	pid_t	pid;
 
 	(void)argv;
-	if (argc == 1)
+	if (argc == 1 && __APPLE__)
 	{
 		pid = getpid();
 		ft_putstr("My pid is: ");

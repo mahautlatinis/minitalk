@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:06:51 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/16 16:06:53 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/07 19:24:56 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <signal.h>
 #include <stdlib.h>
 
-/* On fait un ft_putnbr pour afficher le pid */
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -71,13 +70,12 @@ void	translate_message_32(int num)
 	}
 }
 
-/* Je vais pouvoir afficher le caractère une fois les 8 bits transmis */
 int	main(int argc, char **argv)
 {
 	pid_t	pid;
 
 	(void)argv;
-	if (argc == 1)
+	if (argc == 1 && __APPLE__)
 	{
 		pid = getpid();
 		ft_putstr("My pid is: ");
