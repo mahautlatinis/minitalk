@@ -6,18 +6,12 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:46:39 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:26:27 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:31:32 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
-
-#if __APPLE__
-# define IS_MACOS 1
-#else
-# define IS_MACOS 0
-#endif
 
 # include <unistd.h>
 # include <stdio.h>

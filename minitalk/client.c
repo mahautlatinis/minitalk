@@ -6,11 +6,19 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:53:59 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:26:34 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:32:40 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./minitalk.h"
+
+#ifndef SIGUSR1
+# define SIGUSR1 30
+#endif 
+
+#ifndef SIGUSR2
+# define SIGUSR2 31 
+#endif
 
 int	ft_isdigit(int c)
 {
@@ -69,7 +77,7 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	if (argc > 1 && argc < 4 && IS_MACOS)
+	if (argc > 1 && argc < 4)
 	{
 		pid = ft_atoi(argv[1]);
 		if (pid == 0)

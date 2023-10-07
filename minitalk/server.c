@@ -6,11 +6,19 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:26:45 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:32:29 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./minitalk.h"
+
+#ifndef SIGUSR1
+# define SIGUSR1 30
+#endif 
+
+#ifndef SIGUSR2
+# define SIGUSR2 31 
+#endif 
 
 void	ft_putchar(char c)
 {
@@ -67,7 +75,7 @@ int	main(int argc, char **argv)
 	pid_t	pid;
 
 	(void)argv;
-	if (argc == 1 && IS_MACOS)
+	if (argc == 1)
 	{
 		pid = getpid();
 		ft_putstr("My pid is: ");

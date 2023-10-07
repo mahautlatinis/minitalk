@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:06:51 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:27:18 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:32:47 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 #include <signal.h>
 #include <stdlib.h>
 #include "../minitalk.h"
+
+#ifndef SIGUSR1
+# define SIGUSR1 30
+#endif 
+
+#ifndef SIGUSR2
+# define SIGUSR2 31 
+#endif 
 
 void	ft_putchar(char c)
 {
@@ -76,7 +84,7 @@ int	main(int argc, char **argv)
 	pid_t	pid;
 
 	(void)argv;
-	if (argc == 1 && IS_MACOS)
+	if (argc == 1)
 	{
 		pid = getpid();
 		ft_putstr("My pid is: ");
