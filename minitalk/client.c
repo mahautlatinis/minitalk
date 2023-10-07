@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:53:59 by malatini          #+#    #+#             */
-/*   Updated: 2023/09/28 19:29:56 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:15:34 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	main(int argc, char **argv)
 		}
 		else if (argc == 2)
 		{
-			write(2, "Error.\nYou did not inputed a string.\n", 39);
+			write(2, "Error.\nYou did not inputed a string.\n", 38);
 			exit (EXIT_FAILURE);
 		}
 	}
