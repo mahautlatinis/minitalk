@@ -6,25 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 20:12:58 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:18:12 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./minitalk.h"
-
-#ifndef SIGUSR1
-# define SIGUSR1 30
-#endif 
-
-#ifndef SIGUSR2
-# define SIGUSR2 31 
-#endif 
-
-#if __APPLE__
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_putstr(char *str)
 {
@@ -53,6 +39,11 @@ void	ft_putnbr(int nb)
 	if (nb > 9)
 		ft_putnbr(nb / 10);
 	ft_putchar(nb % 10 + '0');
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
 
 void	decrypt_message(int signalValue)
@@ -89,4 +80,3 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
-#endif

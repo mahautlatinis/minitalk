@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:07:06 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 20:12:45 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:17:46 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 #include <signal.h>
 #include <stdlib.h>
 #include "../minitalk.h"
-
-#ifndef SIGUSR1
-# define SIGUSR1 30
-#endif 
-
-#ifndef SIGUSR2
-# define SIGUSR2 31 
-#endif 
 
 int	ft_isdigit(int c)
 {
@@ -75,6 +67,7 @@ void	convert_char_32(char c, int pid)
 		i--;
 	}
 }
+#endif
 
 int	main(int argc, char **argv)
 {
@@ -104,4 +97,3 @@ int	main(int argc, char **argv)
 	}
 	exit (EXIT_SUCCESS);
 }
-#endif
