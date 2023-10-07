@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:07:06 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:32:43 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:09:49 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,17 @@ void	convert_char_32(char c, int pid)
 	int	i;
 
 	i = 31;
-	while (i >= 0)
-	{
-		if (c >> i & 1)
-			kill(pid, SIGUSR1);
-		else
-			kill(pid, SIGUSR2);
-		usleep(100);
-		i--;
-	}
+	#if (__APPLE__)
+		while (i >= 0)
+		{
+			if (c >> i & 1)
+				kill(pid, SIGUSR1);
+			else
+				kill(pid, SIGUSR2);
+			usleep(100);
+			i--;
+		}
+	#endif
 }
 
 int	main(int argc, char **argv)

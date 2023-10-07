@@ -6,7 +6,7 @@
 #    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 19:28:43 by malatini          #+#    #+#              #
-#    Updated: 2023/10/07 20:06:29 by mahautlatin      ###   ########.fr        #
+#    Updated: 2023/10/07 20:08:27 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ OBJS_SERVER_B 	=	${SRCS_SERVER_B:.c=.o}
 
 CC				=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror -d_posix_c_source 
+CFLAGS			=	-Wall -Wextra -Werror
 
 RM				=	rm -rf
 
