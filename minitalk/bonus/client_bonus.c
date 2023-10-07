@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:07:06 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 20:20:52 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:21:32 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-#if __APPLE__
 int	ft_atoi(const char *str)
 {
 	long	i;
@@ -67,7 +66,6 @@ void	convert_char_32(char c, int pid)
 		i--;
 	}
 }
-#endif
 
 int	main(int argc, char **argv)
 {
