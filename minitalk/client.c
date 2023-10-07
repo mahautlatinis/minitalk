@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:53:59 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:32:40 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:12:36 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define SIGUSR2 31 
 #endif
 
+#if __APPLE__
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
@@ -98,3 +99,4 @@ int	main(int argc, char **argv)
 	}
 	exit (EXIT_SUCCESS);
 }
+#endif

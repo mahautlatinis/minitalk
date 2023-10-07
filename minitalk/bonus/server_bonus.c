@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:06:51 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 20:00:05 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:12:42 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define SIGUSR2 31 
 #endif 
 
+#if __APPLE__
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -97,3 +98,4 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+#endif
