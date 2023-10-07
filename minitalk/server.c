@@ -6,17 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/09/28 19:31:47 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:20:46 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./minitalk.h"
-
-/* On fait un ft_putnbr pour afficher le pid */
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_putstr(char *str)
 {
@@ -47,7 +41,11 @@ void	ft_putnbr(int nb)
 	ft_putchar(nb % 10 + '0');
 }
 
-/* Traduction des différents bits envoyés pour reconstruire le char */
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	decrypt_message(int signalValue)
 {
 	static int	power = 0;
@@ -64,7 +62,6 @@ void	decrypt_message(int signalValue)
 	}
 }
 
-/* Je vais pouvoir afficher le caractère une fois les 8 bits transmis */
 int	main(int argc, char **argv)
 {
 	pid_t	pid;
@@ -79,7 +76,7 @@ int	main(int argc, char **argv)
 		signal(SIGUSR1, decrypt_message);
 		signal(SIGUSR2, decrypt_message);
 		while (42)
-			pause();
+			;
 	}
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:07:06 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/16 16:07:09 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/07 20:21:32 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <stdlib.h>
+#include "../minitalk.h"
 
 int	ft_isdigit(int c)
 {
