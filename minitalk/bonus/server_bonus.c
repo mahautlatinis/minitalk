@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:06:51 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:32:47 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 20:00:05 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	main(int argc, char **argv)
 		signal(SIGUSR1, translate_message_32);
 		signal(SIGUSR2, translate_message_32);
 		while (42)
-			pause();
+			;
 	}
 	return (0);
 }
