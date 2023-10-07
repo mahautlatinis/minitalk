@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 19:55:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:24:29 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:26:45 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	main(int argc, char **argv)
 	pid_t	pid;
 
 	(void)argv;
-	if (argc == 1 && __APPLE__)
+	if (argc == 1 && IS_MACOS)
 	{
 		pid = getpid();
 		ft_putstr("My pid is: ");

@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:06:51 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/07 19:24:56 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/07 19:27:18 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <stdlib.h>
+#include "../minitalk.h"
 
 void	ft_putchar(char c)
 {
@@ -75,7 +76,7 @@ int	main(int argc, char **argv)
 	pid_t	pid;
 
 	(void)argv;
-	if (argc == 1 && __APPLE__)
+	if (argc == 1 && IS_MACOS)
 	{
 		pid = getpid();
 		ft_putstr("My pid is: ");
