@@ -1,17 +1,16 @@
-name: macOS C/C++ compilation CI
+name: macOS compilation
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
   pull_request:
-    branches: [ "master" ]
+    branches: ['master']
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: make
-      run: cd ./minitalk; make
+      - uses: actions/checkout@v3
+      - name: make
+        run: cd ./minitalk; make
